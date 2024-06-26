@@ -1,0 +1,21 @@
+{
+  "name": "tailwind-admin-theme",
+  "version": "1.0.0",
+  "description": "Boilerplate tailwind admin theme",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "echo \"Error: no dev specified\" && exit 1",
+    "build": "echo \"Error: no build specified\" && exit 1"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwind-css",
+    "admin"
+  ],
+  "author": "William George",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Tailwind Admin theme" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="generator" content="Tailwind Admin theme" />
+		<title>Tailwind Admin theme</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            //https://tailwindcss.com/docs/customizing-spacing
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        spacing: {
+                            "header": `calc(env(safe-area-inset-bottom) + 5rem)`,
+                            "menu": "2.5rem",
+                            "menu-sm": "15rem",
+                            "menu-md": "12rem",
+                            "menu-lg": "18rem",
+                            "safe": `env(safe-area-inset-bottom)`,
+                        }
+                    },
+                },
+                plugins: [
+                    function({ addVariant }) {
+                        addVariant('firefox', ':-moz-any(&)')
+                    }
+                ],
+            }
+          </script>
+	</head>
+	<body class="overscroll-none">
+		<!-- Page -->
+		<div class="group/menu relative flex min-h-lvh">
+			
+			<!-- Header -->
+			<header class="fixed w-full h-header z-50 bottom-0 overflow-x-auto [padding-bottom:env(safe-area-inset-bottom)] sm:[overflow-x:initial] sm:h-full sm:w-[theme(spacing.header)] sm:overflow-y-auto bg-orange-300 shadow-[rgba(0,0,0,0.5)_0px_16px_30px_10px] sm:shadow-[rgba(0,0,15,0.5)_-60px_0px_41px_-68px_inset]">
+		
+				<!-- Navigation -->
+				<nav class="w-full h-full flex flex-row flex-nowrap sm:flex-col" role="tablist" aria-label="Sample Tabs">
+
+					<!-- Fixed Top -->
+					<div class="flex flex-row flex-nowrap sm:flex-col shrink-0 grow-0">
+						<label class="block w-20 h-20 p-3 text-center font-light text-sm box-border grow-0 shrink-0 hover:backdrop-brightness-95 aria-selected:backdrop-brightness-110 cursor-pointer md:hidden group-has-[:checked]/menu:backdrop-brightness-110" role="tab" for="mobile-menu">
+							<input type="checkbox" id="mobile-menu" class="hidden" />
+							<i class="block p-1 m-auto max-h-10 max-w-10">
+								<svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 24 24" style="display: block; padding: 5px; margin: auto;"><g>
+									<path d="M6 12c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm9 0c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm9 0c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z" />
+								</g></svg>	
+							</i>  
+							
+							More
+
+						</label>
+					</div>
+		
+					<!-- Scroll View -->
+					<div class="flex flex-row flex-nowrap sm:flex-col shrink grow overflow-x-auto overflow-y-clip sm:overflow-y-auto sm:overflow-x-clip overscroll-none [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-track]:bg-orange-200 [&::-webkit-scrollbar-thumb]:bg-orange-500 [&::-webkit-scrollbar-thumb:hover]:bg-neutral-60 [&:scrollbar-color]:bg-orange-500 firefox:[scrollbar-color:theme(colors.orange.500)_theme(colors.orange.200)] firefox:[scrollbar-width:thin]">
+						
+                        <!-- NavigationItem -->
+						<a href="#" class="block w-20 h-20 p-3 text-center font-light text-sm box-border grow-0 shrink-0 hover:backdrop-brightness-95 aria-selected:backdrop-brightness-110" role="tab" aria-selected={idx===2}>
+							<i class="block m-auto max-h-10 max-w-10">
+								<svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 50 50" style="display: block; padding: 5px; margin: auto;"><g><path d="M47.74,22H2.26L5.61,11.12A2.98216,2.98216,0,0,1,8.48,9H15.05c-.03.33-.05.66-.05,1a9.93438,9.93438,0,0,0,2.01,6H16a1,1,0,0,0,0,2H34a1,1,0,0,0,0-2H32.99A9.93438,9.93438,0,0,0,35,10c0-.34-.02-.67-.05-1h6.57a2.98209,2.98209,0,0,1,2.87,2.12ZM28.61475,29a4.08076,4.08076,0,0,0-2.90723,1.208,1.03055,1.03055,0,0,1-1.415,0A4.08076,4.08076,0,0,0,21.38525,29a4.12359,4.12359,0,0,0-4.1123,4.126c0,4.38574,5.93652,8.542,7.727,9.69629,1.79053-1.1543,7.727-5.31055,7.727-9.69629A4.12359,4.12359,0,0,0,28.61475,29ZM38,29a.99974.99974,0,0,0,1,1h9v5H39a1,1,0,0,0,0,2h9v5H39a1,1,0,0,0,0,2h9v1a3.00328,3.00328,0,0,1-3,3H5a3.00328,3.00328,0,0,1-3-3V44h9a1,1,0,0,0,0-2H2V37h9a1,1,0,0,0,0-2H2V30h9a1,1,0,0,0,0-2H2V24H48v4H39A.99974.99974,0,0,0,38,29Zm-3.273,4.126A6.12619,6.12619,0,0,0,28.61475,27,6.05647,6.05647,0,0,0,25,28.18457,6.05647,6.05647,0,0,0,21.38525,27a6.12619,6.12619,0,0,0-6.1123,6.126c0,6.28515,8.84668,11.51855,9.22314,11.73828a1.01922,1.01922,0,0,0,1.00782,0C25.88049,44.64446,34.72705,39.41109,34.72705,33.126ZM17,10a8,8,0,1,1,13.27374,6H19.72626A7.97566,7.97566,0,0,1,17,10Zm7-3a.99974.99974,0,0,0,1,1,2.00229,2.00229,0,0,1,2,2,1,1,0,0,0,2,0,4.00427,4.00427,0,0,0-4-4A.99974.99974,0,0,0,24,7Zm-3,3a4.00427,4.00427,0,0,0,4,4,1,1,0,0,0,0-2,2.00229,2.00229,0,0,1-2-2,1,1,0,0,0-2,0Z"></path></g></svg>	
+							</i>  
+							
+							Title
+						</a>
+
+					</div>
+
+					<!-- Fixed Bottom -->
+					<div class="flex flex-row flex-nowrap sm:flex-col shrink-0 grow-0">
+						<a href="#" class="block w-20 h-20 p-3 text-center font-light text-sm box-border grow-0 shrink-0 hover:backdrop-brightness-95 aria-selected:backdrop-brightness-110" role="tab">
+
+							<i class="block p-1 m-auto max-h-10 max-w-10">
+								<svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 24 24" style="display: block; padding: 5px; margin: auto;"><g>
+									<path d="M9 6h-2v-2c0-1.104.896-2 2-2h6c1.104 0 2 .896 2 2v2h-2v-1.51c0-.27-.22-.49-.49-.49h-5.02c-.27 0-.49.22-.49.49v1.51zm-9 1v6h24v-6h-24zm21 13h-5.824l-2.401-2.4c-.186-.186-.28-.444-.261-.705.038-.495-.132-1.003-.51-1.382-.343-.344-.792-.513-1.241-.513-.169 0-.338.024-.502.072l1.057 1.057c.115.53-.652 1.306-1.188 1.189l-1.057-1.057c-.049.164-.073.333-.073.503 0 .449.17.897.513 1.24.378.379.887.549 1.382.51.261-.02.519.075.704.261l1.225 1.225h-9.824v-5h-2v7h22v-7h-2v5z" />
+								  </g></svg>	
+							</i>  
+							
+							Settings
+
+						</a>
+
+						<a href="#" class="block w-20 h-20 p-3 text-center font-light text-sm box-border grow-0 shrink-0 hover:backdrop-brightness-95 aria-selected:backdrop-brightness-110" role="tab">
+
+							<i class="block p-1 m-auto max-h-10 max-w-10">
+								<svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="100%" width="100%" viewBox="0 0 24 24" style="display: block; padding: 5px; margin: auto;"><g>
+									<path d="M16 12.771h-3.091c-.542 0-.82-.188-1.055-.513l-1.244-1.674-2.029 2.199 1.008 1.562c.347.548.373.922.373 1.42v4.235h-1.962v-3.981c-.016-1.1-1.695-2.143-2.313-1.253l-1.176 1.659c-.261.372-.706.498-1.139.498h-3.372v-1.906l2.532-.001c.397 0 .741-.14.928-.586l1.126-2.75c.196-.41.46-.782.782-1.102l2.625-2.6-.741-.647c-.223-.195-.521-.277-.812-.227l-2.181.381-.342-1.599 2.992-.571c.561-.107 1.042.075 1.461.462l2.882 2.66c.456.414.924 1.136 1.654 2.215.135.199.323.477.766.477h2.328v1.642zm-2.982-5.042c1.02-.195 1.688-1.182 1.493-2.201-.172-.901-.96-1.528-1.845-1.528-1.186 0-2.07 1.078-1.85 2.234.196 1.021 1.181 1.69 2.202 1.495zm4.982-5.729v15l6 5v-20h-6z" />
+								  </g></svg>	
+							</i>  
+							
+							Logout
+
+						</a>
+					</div>
+		
+				</nav>
+		
+			</header>
+
+			<!-- Main -->
+			<main class="relative w-full min-h-lvh mb-header sm:mb-0 sm:ml-header">
+				<!-- Detail -->
+				<section class="peer relative flex w-full min-h-lvh flex-row">
+			
+					<!-- Spacer Full -->
+					<div class="shrink-0 w-0 max-md:group-has-[:checked]/menu:w-menu md:w-menu-md lg:w-menu-lg transition-[width] duration-500 ease-in-out"></div>
+			
+					<!-- Slot -->
+					<div class="relative grow min-h-lvh w-full">
+						
+					</div>
+			
+				</section>
+
+				<!-- Drawer -->
+				<aside class="absolute z-40 left-0 top-0 bottom-0 flex flex-col flex-nowrap w-menu-sm md:w-menu-md lg:w-menu-lg h-full bg-neutral-300 transition-[width,_transform] duration-500 ease-in-out -translate-x-full max-md:group-has-[:checked]/menu:translate-x-0 max-md:group-has-[:checked]/menu:peer-hover:translate-x-[calc(-100%+theme(spacing.menu))] max-md:group-has-[:checked]/menu:peer-focus-within:translate-x-[calc(-100%+theme(spacing.menu))] md:translate-x-0 shadow-[rgba(0,0,15,0.5)_-60px_0px_41px_-68px_inset]">
+
+					<!-- Scroll View -->
+					<div class="sticky w-full h-lvh overflow-y-auto overflow-x-clip top-0 pb-header sm:pb-safe">
+						
+					</div>
+					
+				</aside>
+			</main>
+		</div>
+	</body>
+</html>
